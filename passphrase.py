@@ -15,8 +15,10 @@ import pyperclip
 from termcolor import colored
 from colorama import init
 
+# Initialize terminal ANSI color for Windows users
 init()
 
+# Python 3.0 check
 print(colored(sys.version, 'grey'))
 if sys.version_info[0] < 3:
     #raise Exception("Python 3 or a more recent version is required.")
