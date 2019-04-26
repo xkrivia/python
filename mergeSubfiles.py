@@ -7,6 +7,7 @@
 # III)[36]            36=18+18
 # IV) return 67       = 13+18+36
 
+# Global variables
 total = 0
 final = 0
 iteration = 1
@@ -40,7 +41,7 @@ def mergeSubfiles(arr):
     print("Current total is: ", total)
     iteration += 1
 
-    # If array bigger than one, recurse
+    # If array bigger than one, recurse (sic(?))
     if len(arr)!=1:
         mergeSubfiles(arr)
     # Otherwise, reset variables and return final
@@ -52,6 +53,6 @@ def mergeSubfiles(arr):
     return final
 
 # Testcases
-print(mergeSubfiles([18,5,11,2]))
 print(mergeSubfiles([18]))
-print(mergeSubfiles([8,6,7,5,3,1,9]))
+print(mergeSubfiles([18,5,11,2]))
+print(mergeSubfiles([16,13,1,5]))
