@@ -12,7 +12,7 @@ total = 0
 final = 0
 iteration = 1
 
-def mergeSubfiles(arr):
+def mergeSubfiles(arr) -> int:
     global total
     global iteration
     global final

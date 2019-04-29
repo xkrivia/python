@@ -1,5 +1,4 @@
-# fibonacci.py
-# Written by: ChrisTheCaribou
+# CHRIS FELLI, 2019
 # This program outputs fibonacci sequence between 1 and 100,000,000
 import time
 

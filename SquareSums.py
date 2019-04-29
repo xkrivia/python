@@ -1,5 +1,4 @@
-# SquareSums.py
-# Written by: ChrisTheCaribou
+# CHRIS FELLI, 2019
 # Subtracts sum of squares from the square of the sums
 # (Problem #6 on Project Euler)
 

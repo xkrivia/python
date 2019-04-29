@@ -1,5 +1,4 @@
-# 3and5.py
-# Written by: ChrisTheCaribou
+# CHRIS FELLI, 2019
 # This program adds all elements less than 1000 that are divisble by 3 or 5
 # (Problem #2 on Project Euler)
 

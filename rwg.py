@@ -1,5 +1,4 @@
-# rwg.py
-# Written by: ChrisTheCaribou
+# CHRIS FELLI, 2019
 # This program generates an n-length series of random words, which I use for
 # website logins. Also copies to clipboard!
 

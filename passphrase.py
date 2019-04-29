@@ -1,5 +1,4 @@
-# passphrase.py
-# Written by: ChrisTheCaribou
+# CHRIS FELLI, 2019
 # This program generates an n-length passphrase and copies it to the clipboard
 # Useful if you don't trust websites and desire to use your OWN system memory
 
