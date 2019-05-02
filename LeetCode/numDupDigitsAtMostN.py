@@ -27,7 +27,7 @@ class Solution:
         counterList = []
         counter = 0
         for i in range(N+1):
-            if Bob.duplicateDigits(i):
+            if duplicateDigits(i):
                 counter += 1
                 counterList.append(i)
         print(counterList)
