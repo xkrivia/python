@@ -27,10 +27,7 @@ class LRUCache:
 
     def put(self, key, val) -> None:
         if key in self.cache:
-            # Verbosity helps contextualize
-            print("IN CACHE!")
             del self.cache[key]
-        print(key, " SET TO ", val)
         self.cache[key] = val
         if len(self.cache) > self.size:
             self.cache.popitem(last=False)
