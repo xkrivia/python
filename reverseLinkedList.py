@@ -1,18 +1,12 @@
+# CHRIS FELLI, 2019
 # Python program to reverse a linked list  
-# Time Complexity : O(n) 
-# Space Complexity : O(1) 
-  
-# Node class  
+
 class Node: 
-  
-    # Constructor to initialize the node object 
     def __init__(self, data): 
         self.data = data 
         self.next = None
   
 class LinkedList: 
-  
-    # Function to initialize head 
     def __init__(self): 
         self.head = None
   
