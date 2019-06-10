@@ -1,4 +1,5 @@
 # CHRIS FELLI, 2019
+# Given a list of integers, calculate max area of all of them
 from typing import List
 
 class Solution:
