@@ -1,6 +1,5 @@
 # CHRIS FELLI, 2019
 # Flatten a list of arrays of n depth
-
 from typing import Iterable            
 
 def flattenGenerator(items):
