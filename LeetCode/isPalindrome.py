@@ -3,7 +3,7 @@
 # Given "ufo tofu", return TRUE
 # Given "tomato", return FALSE
 
-def isPalindrome(s) -> bool:
+def isPalindrome(s: str) -> bool:
     # Remove whitespace and caps, not always necessary
     s = s.replace(' ', '')
     s = s.lower()
