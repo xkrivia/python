@@ -1,2 +1,2 @@
 # Python
-This repository is where I practice my algorithm skills because ~~the industry currently values competitive programming even though *plenty* of tenured engineers at Big-N companies couldn't pass today's ridiculous job interviews to join their bourgeois clubs~~ I'm on the autistic spectrum and obsessed with bettering my technical skills. And despite my rampant cynicism, algorithms are actually quite a bit of fun when you aren't smashing your head against the wall.
+This repository is where I practice my algorithms and problem solving.
