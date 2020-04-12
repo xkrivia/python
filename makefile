@@ -1,5 +1,5 @@
 test:
-	pytest
+	pytest -v
 
 setup-ubuntu-dev:
 	sudo apt install -y python3 python3-pip virtualenv
