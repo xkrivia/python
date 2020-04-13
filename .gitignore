@@ -1,11 +1,6 @@
-# byte-compiled / optimized / *.DLL files
 __pycache__/
 *.py[cod]
-
-# C extensions
 *.so
-
-# distribution / packaging
 .Python
 env/
 build/
@@ -22,12 +17,8 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-
-# installer logs
 pip-log.txt
 pip-delete-this-directory.txt
-
-# unit test / coverage reports
 htmlcov/
 .tox/
 .coverage
@@ -36,16 +27,8 @@ htmlcov/
 nosetests.xml
 coverage.xml
 *,cover
-
-# translations
 *.mo
 *.pot
-
-# django stuff:
 *.log
-
-# sphinx documentation
 docs/_build/
-
-# PyBuilder
 target/
