@@ -1,8 +1,8 @@
 test:
-	pytest -v
-	# pep8 ~ not ready yet but the end goal
+	python3 -m pytest -v
+	#'pep8' is not ready yet but in the roadmap
 
-setup-ubuntu-dev:
+setup-ubuntu:
 	sudo apt install -y python3 python3-pip virtualenv
 	pip3 install pytest sphinx pep8 flake8
 
