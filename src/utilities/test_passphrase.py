@@ -3,15 +3,19 @@ import string
 import random
 import sys
 import pyperclip
+import os
+import time
+from slogger import instantiate
 
-FILE_NAME = "logs/passphrase"
-FILE_NAME_LOG = FILE_NAME + ".log"
-logging.basicConfig(filename=FILE_NAME_LOG, level=logging.DEBUG)
+
+this_scripts_name = str(os.path.splitext(os.path.basename(__file__))[0])
+instantiate(this_scripts_name)
+
 
 def passphrase(length: int) -> str:
     alphabet = string.ascii_letters + string.digits + string.punctuation
     product = str(''.join(random.choice(alphabet) for i in range(length)))
-    logging.info(product)
+    logging.info(" "+product)
     return(product)
 
 def test_passphrase_10_sets_of_10():
