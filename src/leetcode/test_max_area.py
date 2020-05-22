@@ -1,23 +1,24 @@
-# CHRIS FELLI, 2019
-# Given a list of integers, calculate max area of all of them
 from typing import List
 
-class Solution:
-    def __init__(self, height=[]):
-        self.height = height
 
-    def maxArea(self, height: List[int]) -> int:
-        i, j = 0, len(height) - 1
-        water = 0
-        # Start with outermost points, work your way towards the middle
-        while i < j:
-            water = max(water, (j - i) * min(height[i], height[j]))
-            if height[i] < height[j]:
-                i += 1
-            else:
-                j -= 1
-        return water
+def max_area(height: List[int]) -> int:
+	i, j = 0, len(height) - 1
+	water = 0	
+	
+	# start with outermost points, work your way towards the middle
+	while i < j:
+		water = max(water, (j - i) * min(height[i], height[j]))
+		if height[i] < height[j]:
+			i += 1
+		else:
+			j -= 1
+	return water
 
-# Driver
-test = Solution()
-print(test.maxArea([1,8,6,2,5,4,8,3,7]))
+def test_max_area():
+	assert max_area([8,6,7,5,3,0,9]) == 48
+	assert max_area([9,8,1,0,1]) == 8
+	assert max_area([0,0]) == 0
+	
+def test_max_area_edge_cases():
+	assert max_area([0]) == 0
+	assert max_area([]) == 0
