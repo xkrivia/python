@@ -13,7 +13,6 @@ clean:
 
 logs-go-away:
 	find . | grep -E "(logs|\.log)" | xargs rm -rf
-	tree -C logs
 
-all-the-files-formatted:
+python-pep8-formatted:
 	find . -name '*.py' -exec autopep8 --in-place '{}' \;
