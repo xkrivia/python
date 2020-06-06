@@ -1,12 +1,15 @@
 # CHRIS FELLI, 2019
 # Detect if there is a loop in linked list
 
+
 class Node(object):
-    def __init__(self, data = None, next_node = None):
+    def __init__(self, data=None, next_node=None):
         self.data = data
         self.next = next_node
-    def setNext(self, next_node = None):
+
+    def setNext(self, next_node=None):
         self.next = next_node
+
 
 def has_cycle(head):
     if head == None:
@@ -20,6 +23,7 @@ def has_cycle(head):
         tortoise = tortoise.next
         hare = hare.next.next
     return False
+
 
 # Testcases
 n1 = Node(1, None)

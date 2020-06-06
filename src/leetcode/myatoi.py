@@ -1,6 +1,8 @@
 # CHRIS FELLI, 2019
 # Build your own atoi
-import re, string
+import re
+import string
+
 
 class Solution:
     def _init_(self, s):
@@ -18,18 +20,19 @@ class Solution:
         if(str.startswith(tuple(string.ascii_letters))):
             return 0
         # Strip whitespace/alphanumerics from right
-        str =re.sub("[^0-9]", "", str)
-        try: # Try to cast 
+        str = re.sub("[^0-9]", "", str)
+        try:  # Try to cast
             fin = int(str)
             if isNeg == True:
                 fin *= -1
-            if fin>2147483648:
+            if fin > 2147483648:
                 return 2147483648
-            if fin<-2147483648:
+            if fin < -2147483648:
                 return -2147483648
             return fin
         except ValueError:
             return 0
+
 
 # Driver
 test = Solution()

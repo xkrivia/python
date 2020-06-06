@@ -9,7 +9,10 @@ import re
 import sys
 
 # Complete the birthdayCakeCandles function below.
+
+
 def birthdayCakeCandles(ar):
     return ar.count(max(ar))
 
-print(birthdayCakeCandles([4,4,1,3]))
+
+print(birthdayCakeCandles([4, 4, 1, 3]))

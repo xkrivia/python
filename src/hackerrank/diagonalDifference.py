@@ -8,6 +8,7 @@ import random
 import re
 import sys
 
+
 def diagonalDifference(arr):
     diag1 = 0
     diag2 = 0
@@ -19,6 +20,7 @@ def diagonalDifference(arr):
         diag2 += arr[i][size-i-1]
     return abs(diag1-diag2)
 
-print(diagonalDifference([[11,2,4],
-                        [4,5,6],
-                        [10,8,-12]]))
+
+print(diagonalDifference([[11, 2, 4],
+                          [4, 5, 6],
+                          [10, 8, -12]]))

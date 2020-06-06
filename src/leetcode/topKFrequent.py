@@ -7,6 +7,7 @@
 # Output: [1]
 from typing import List
 
+
 class Solution:
     def __init__(self, nums=[], k=0):
         self.nums = nums
@@ -21,11 +22,12 @@ class Solution:
                 dic[nums[i]] += 1
         final = [int] * k
         for j in range(k):
-            bigkey=max(dic, key=dic.get)
-            final[j]=bigkey
+            bigkey = max(dic, key=dic.get)
+            final[j] = bigkey
             del dic[bigkey]
         return final
 
+
 test = Solution()
-print(test.topKFrequent([1,1,1,2,3], 2))
+print(test.topKFrequent([1, 1, 1, 2, 3], 2))
 print(test.topKFrequent([1], 1))

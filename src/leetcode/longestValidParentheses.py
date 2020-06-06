@@ -2,11 +2,12 @@
 # Given a string of only parentheses, return the
 # length of the longest valid substring
 
+
 class Solution:
     def _init_(self, s=""):
         self.s = s
 
-    # dp[i] = the number of longest valid Parentheses ended with the 
+    # dp[i] = the number of longest valid Parentheses ended with the
     # i - 1 position of s, then we have the following relationship:
     # dp[i + 1] = dp[p] + i - p + 1
     # where p is the position of '(' which can matches current ')' in the stack.

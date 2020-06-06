@@ -1,6 +1,7 @@
 # CHRIS FELLI, 2019
 # Flatten a list of arrays of n depth
-from typing import Iterable            
+from typing import Iterable
+
 
 def flattenGen(items):
     for x in items:
@@ -10,8 +11,10 @@ def flattenGen(items):
         else:
             yield x
 
+
 def flatten(items):
     return list(flattenGen(items))
+
 
 # Driver
 print(flatten([[1, 2, 3], [4, [5, 6]], [7], [8, 9]]))

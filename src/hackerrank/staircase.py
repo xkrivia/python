@@ -9,11 +9,14 @@ import re
 import sys
 
 # Complete the staircase function below.
+
+
 def staircase(n):
     for i in range(n+1):
-        if i==0:
+        if i == 0:
             continue
         print(("#"*i).rjust(n))
+
 
 staircase(3)
 staircase(5)

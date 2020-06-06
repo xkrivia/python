@@ -12,13 +12,14 @@ total = 0
 final = 0
 iteration = 1
 
+
 def mergeSubfiles(arr) -> int:
     global total
     global iteration
     global final
 
     # Edge case: Array length of one
-    if len(arr)==1 & iteration==1:
+    if len(arr) == 1 & iteration == 1:
         return 0
 
     print("Array is: ", arr)
@@ -28,7 +29,7 @@ def mergeSubfiles(arr) -> int:
     for i in range(len(arr)-1):
         delta[i] = arr[i] + arr[i+1]
     #print("Delta array is: ", delta)
-    
+
     # Find lowest index
     total += min(delta)
     minIndex = delta.index(min(delta))
@@ -42,17 +43,18 @@ def mergeSubfiles(arr) -> int:
     iteration += 1
 
     # If array bigger than one, recurse (sic(?))
-    if len(arr)!=1:
+    if len(arr) != 1:
         mergeSubfiles(arr)
     # Otherwise, reset variables and return final
-    elif len(arr)==1:
+    elif len(arr) == 1:
         final = total
         total = 0
         iteration = 1
         print("FINAL TOTAL:", final)
     return final
 
+
 # Testcases
 print(mergeSubfiles([18]))
-print(mergeSubfiles([18,5,11,2]))
-print(mergeSubfiles([16,13,1,5]))
+print(mergeSubfiles([18, 5, 11, 2]))
+print(mergeSubfiles([16, 13, 1, 5]))

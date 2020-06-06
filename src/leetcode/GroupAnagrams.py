@@ -19,6 +19,7 @@ from typing import List
 # Constants can be dropped when dealing with Big-O notation,
 # ergo, space complexity is O(n).
 
+
 class Solution:
     def __self__(self, words):
         self.words = words
@@ -30,11 +31,12 @@ class Solution:
             dict[key] = dict.get(key, []) + [word]
         return list(dict.values())
 
+
 # Driver & testcases
 t = Solution()
 print(t.Anagrams([]))
 print(t.Anagrams(['']))
 print(t.Anagrams(['pots', 'post', 'chris']))
-print(t.Anagrams(['abets', 'baste', 'betas', 'beast', 
-'beats', 'amen', 'mane', 'mean', 'name', 'CHONK']))
+print(t.Anagrams(['abets', 'baste', 'betas', 'beast',
+                  'beats', 'amen', 'mane', 'mean', 'name', 'CHONK']))
 print(t.Anagrams(['a', 'b', 'c']))

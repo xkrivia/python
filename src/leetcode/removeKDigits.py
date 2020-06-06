@@ -1,12 +1,13 @@
 # CHRIS FELLI, 2019
-# Given a non-negative integer num represented as a string, 
-# remove k digits from the number so that the new number is the smallest possible. 
+# Given a non-negative integer num represented as a string,
+# remove k digits from the number so that the new number is the smallest possible.
+
 
 class Solution:
     def __init__(self, num="", k=0):
         self.num = num
         self.k = k
-    
+
     def removeKdigits(self, num: str, k: int) -> str:
         # Edge cases
         if (len(num) == 1):
@@ -22,11 +23,11 @@ class Solution:
             t2 = num.replace(t1, "")
             candidates.append(t2)
         candidates.sort()
-        if(candidates[0].lstrip("0")==""):
+        if(candidates[0].lstrip("0") == ""):
             return("0")
-        elif(candidates[0].lstrip("0")!=""):
+        elif(candidates[0].lstrip("0") != ""):
             return(candidates[0].lstrip("0"))
-    
+
     def removeKdigitsON(self, num, k):
         out = []
         for d in num:
@@ -35,6 +36,7 @@ class Solution:
                 k -= 1
             out.append(d)
         return ''.join(out[:-k or None]).lstrip('0') or '0'
+
 
 # Testcases
 test = Solution()

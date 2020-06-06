@@ -4,6 +4,8 @@
 
 # TODO: This algorithm is O(N^2) and not performant, runs out of memory.
 # Need to improve it. Line 44 stalls.
+
+
 class Solution:
     def __init__(self, N=0, s=""):
         self.N = N
@@ -11,10 +13,10 @@ class Solution:
 
     # Helper
     def isPrime(self, N) -> bool:
-        if N==1:
+        if N == 1:
             return False
-        for i in range(2,int(N**0.5)+1):
-            if N%i==0:
+        for i in range(2, int(N**0.5)+1):
+            if N % i == 0:
                 return False
         return True
 
@@ -37,8 +39,9 @@ class Solution:
                 return i
         return 0
 
+
 test = Solution()
 print(test.primePalindrome(6))
 print(test.primePalindrome(8))
 print(test.primePalindrome(13))
-#print(test.primePalindrome(9989900))
+# print(test.primePalindrome(9989900))

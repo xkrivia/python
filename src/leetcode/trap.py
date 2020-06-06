@@ -3,9 +3,10 @@
 # could be stored topographically
 from typing import List
 
+
 class Solution:
     def _init(self, bars=[]):
-        self.bars=bars
+        self.bars = bars
 
     def trap(self, bars: List[int]) -> int:
         if not bars or len(bars) < 3:
@@ -22,7 +23,8 @@ class Solution:
                 volume += r_max - bars[right]
                 right -= 1
         return volume
-    
+
+
 # Driver
 test = Solution()
-print(test.trap([0,1,0,2,1,0,1,3,2,1,2,1]))
+print(test.trap([0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1]))
