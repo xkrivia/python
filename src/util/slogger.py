@@ -3,7 +3,7 @@ import time
 import arrow
 
 
-def instantiate(file_name: str) -> None:
+def slogger(file_name: str) -> None:
     """
     simple logging
     """
