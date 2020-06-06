@@ -11,12 +11,12 @@ setup-ubuntu-dev-env:
 	sudo -H pip3 install pytest sphinx pep8 flake8
 	sudo -H pip3 install pyperclip arrow
 
-clean-artifacts:
+clean:
 	py3clean .
 	pyclean .
 	find . | grep -E "(__pycache__|\.pyc|\.pyo)" | xargs rm -rf
 
-clean-logs:
+clear-logs:
 	find . | grep -E "(logs|\.log)" | xargs rm -rf
 	tree -C logs
 
