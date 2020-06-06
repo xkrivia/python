@@ -3,7 +3,7 @@ test:
 	python3 -m pytest -v
 	tree -C logs
 
-setup-ubuntu:
+setup-ubuntu-dev-env:
 	sudo apt install -y python3 python3-pip virtualenv
 	sudo apt install -y tree
 	sudo apt install -y xsel xclip
@@ -16,3 +16,6 @@ clean:
 	pyclean .
 	find . | grep -E "(__pycache__|\.pyc|\.pyo)" | xargs rm -rf
 	find . | grep -E "(logs|\.log)" | xargs rm -rf
+
+autopep8:
+	find . -name '*.py' -exec autopep8 --in-place '{}' \;
