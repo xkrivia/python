@@ -1,14 +1,9 @@
-# CHRIS FELLI, 2019
-# Given a non-negative integer num represented as a string,
-# remove k digits from the number so that the new number is the smallest possible.
-
-
 class Solution:
     def __init__(self, num="", k=0):
         self.num = num
         self.k = k
 
-    def removeKdigits(self, num: str, k: int) -> str:
+    def remove_K_digits_naive(self, num: str, k: int) -> str:
         # Edge cases
         if (len(num) == 1):
             return str(num)
@@ -28,7 +23,7 @@ class Solution:
         elif(candidates[0].lstrip("0") != ""):
             return(candidates[0].lstrip("0"))
 
-    def removeKdigitsON(self, num, k):
+    def remove_K_digits_O_of_N(self, num: str, k: int) -> str:
         out = []
         for d in num:
             while k and out and out[-1] > d:
@@ -38,10 +33,19 @@ class Solution:
         return ''.join(out[:-k or None]).lstrip('0') or '0'
 
 
-# Testcases
-test = Solution()
-print(test.removeKdigits("1432219", 3))
-print(test.removeKdigits("10200", 1))
-print(test.removeKdigits("0", 1))
-print(test.removeKdigits("10", 1))
-print(test.removeKdigits("9", 1))
+def test_remove_K_digits():
+    test = Solution()
+    assert test.remove_K_digits_O_of_N("14322219", 3) == "12219"
+    assert test.remove_K_digits_O_of_N("10200", 1) == "200"
+    assert test.remove_K_digits_O_of_N("0", 1) == "0"
+    assert test.remove_K_digits_O_of_N("10", 1) == "0"
+    assert test.remove_K_digits_O_of_N("9", 1) == "0"
+
+
+def test_remove_K_digits_2():
+    test = Solution()
+    assert test.remove_K_digits_O_of_N("123456789", 5) == "1234"
+    assert test.remove_K_digits_O_of_N("999999999", 9) == "0"
+    assert test.remove_K_digits_O_of_N("999999999", 5) == "9999"
+    assert test.remove_K_digits_O_of_N("abcdefghij", 6) == "abcd"
+    assert test.remove_K_digits_O_of_N("00000000001", 1) == "0"
