@@ -1,10 +1,3 @@
-# CHRIS FELLI, 2019
-# Given a non-zero array, return the K most frequent elements.
-# Example:
-# Input: nums = [1,1,1,2,2,3], k = 2
-# Output: [1,2]
-# Input: nums = [1], k = 1
-# Output: [1]
 from typing import List
 
 
@@ -13,7 +6,7 @@ class Solution:
         self.nums = nums
         self.k = k
 
-    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+    def top_K_frequent(self, nums: List[int], k: int) -> List[int]:
         dic = {}
         for i in range(len(nums)):
             if nums[i] not in dic:
@@ -28,6 +21,7 @@ class Solution:
         return final
 
 
-test = Solution()
-print(test.topKFrequent([1, 1, 1, 2, 3], 2))
-print(test.topKFrequent([1], 1))
+def test_top_K_frequent():
+    test = Solution()
+    test.top_K_frequent([1, 1, 1, 2, 2, 3], 2) == [1, 2]
+    test.top_K_frequent([1], 1)
