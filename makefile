@@ -1,7 +1,6 @@
 release:
 	mkdir -p logs
 	python3 -m pytest -v
-	tree -C logs
 
 ubuntu-dev-env-sane:
 	sudo apt install -y python3 python3-pip virtualenv tree xsel xclip python-autopep8
