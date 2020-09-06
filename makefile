@@ -6,8 +6,8 @@ ubuntu-dev-env-sane:
 	sudo -H pip3 install pytest sphinx pep8 flake8 pyperclip arrow
 
 clean:
-	py3clean . && pyclean .
-	find . | grep -E "(__pycache__|\.pyc|\.pyo)" | xargs rm -rf
+	py3clean . #cleanup and old python cleanup.
+	find . | grep -E "(__pycache__|\.pyc|\.pyo)" | xargs rm -rf #pseudo-hacky method to conditionally delete python files
 
 logs-go-away:
 	find . | grep -E "(logs|\.log)" | xargs rm -rf
