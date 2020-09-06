@@ -1,9 +1,8 @@
 release:
-	mkdir -p logs
 	python3 -m pytest -v
 
 ubuntu-dev-env-sane:
-	sudo apt install -y python3 python3-pip virtualenv tree xsel xclip python-autopep8
+	sudo apt install -y python3 python3-pip virtualenv tree xsel xclip python3-autopep8
 	sudo -H pip3 install pytest sphinx pep8 flake8 pyperclip arrow
 
 clean:
