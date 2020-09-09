@@ -7,29 +7,27 @@ class Solution:
         # Shorthand to reverse string [::-1]
         return s == s[::-1]
 
-    def prepInput(self, s: str) -> str:
+    def prepInput(s: str) -> str:
         '''
         Helper function to turn input string into only lowercase alphanumeric characters
         '''
         # casefold is faster and more efficient than .lower()
+        print(s)
         s = s.casefold()
-        # s = s.replace(' ', '') <maybe not needed after following code>
-        # Alphanumeric strip courtesy of:
-        # https://stackoverflow.com/questions/1276764/stripping-everything-but-alphanumeric-chars-from-a-string-in-python
-        delchar = ''.join(c for c in map(chr, range(256)) if not c.isalnum())
-        s = s.translate(None, delchar)
+        s = ''.join(c for c in s if c.isalnum())
+        print('final s:', s)
         return s
 
 
-def manTest():
+def test_man():
     '''
     Tests 1st case in leetcode example
     '''
-    assert Solution.isPalindrome('A man, a plan, a canal: Panama')
+    assert Solution().isPalindrome('A man, a plan, a canal: Panama')
 
 
-def raceTest():
+def test_race():
     '''
     Tests 2nd case in leetcode example
     '''
-    assert Solution.isPalindrome('race a car')
+    assert Solution().isPalindrome('race a car') is False
