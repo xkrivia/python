@@ -1,0 +1,14 @@
+class Solution:
+    def checkPossibility(self, nums: List[int]) -> bool:
+        '''
+        Determines if a given array only contains a series of integers that aren't decreasing in value
+        '''
+        diff_list = []
+        print(diff_list)
+        print(nums)
+        for i in range(len(nums)):
+            # diff_list.append(nums[i+1], nums[i])
+            print(nums[i])
+
+def test_example_one():
+    assert Solution().checkPossibility([4, 2, 3])
