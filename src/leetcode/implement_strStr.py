@@ -1,17 +1,13 @@
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
         if needle != '':
-            if needle in haystack:
-                print('yes')
-                return 1
-            else:
-                return -1
+            return haystack.find(needle)
         else:
             return 0
 
 
 def test_hi():
-    assert Solution().strStr('hello', 'll') is 1
+    assert Solution().strStr('hello', 'll') is 2
 
 
 def test_a():
